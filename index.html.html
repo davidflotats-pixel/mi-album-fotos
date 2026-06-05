@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anúnciate con Nosotros</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f5f7fb;
+      color: #1f2937;
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(135deg, #2563eb, #1e40af);
+      color: white;
+      padding: 70px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 42px;
+      margin-bottom: 20px;
+    }
+
+    header p {
+      font-size: 20px;
+      max-width: 750px;
+      margin: 0 auto 30px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #facc15;
+      color: #111827;
+      padding: 14px 28px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+      border: none;
+      cursor: pointer;
+      margin: 8px;
+    }
+
+    .btn:hover {
+      background: #eab308;
+      transform: translateY(-2px);
+    }
+
+    .btn-whatsapp {
+      background: #25d366;
+      color: white;
+    }
+
+    .btn-whatsapp:hover {
+      background: #1ebe5d;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 32px;
+      margin-bottom: 20px;
+      color: #111827;
+    }
+
+    .intro {
+      text-align: center;
+      max-width: 750px;
+      margin: 0 auto 40px;
+      font-size: 18px;
+      color: #4b5563;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+    }
+
+    .card {
+      background: white;
+      padding: 30px;
+      border-radius: 14px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+      text-align: center;
+    }
+
+    .card h3 {
+      margin-bottom: 15px;
+      color: #2563eb;
+      font-size: 22px;
+    }
+
+    .price {
+      font-size: 34px;
+      font-weight: bold;
+      color: #111827;
+      margin: 20px 0;
+    }
+
+    .price span {
+      font-size: 16px;
+      color: #6b7280;
+    }
+
+    .features {
+      list-style: none;
+      margin-top: 20px;
+    }
+
+    .features li {
+      margin-bottom: 10px;
+      color: #374151;
+    }
+
+    .highlight {
+      border: 3px solid #2563eb;
+      transform: scale(1.03);
+    }
+
+    .stats {
+      background: #111827;
+      color: white;
+      max-width: none;
+      padding: 60px 20px;
+    }
+
+    .stats h2 {
+      color: white;
+    }
+
+    .stats-container {
+      max-width: 1100px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 25px;
+      text-align: center;
+    }
+
+    .stat-box {
+      padding: 20px;
+    }
+
+    .stat-box strong {
+      display: block;
+      font-size: 36px;
+      color: #facc15;
+      margin-bottom: 10px;
+    }
+
+    form {
+      background: white;
+      padding: 35px;
+      border-radius: 14px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+      max-width: 700px;
+      margin: auto;
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      padding: 14px;
+      margin-bottom: 18px;
+      border: 1px solid #d1d5db;
+      border-radius: 8px;
+      font-size: 16px;
+    }
+
+    textarea {
+      min-height: 130px;
+      resize: vertical;
+    }
+
+    button {
+      width: 100%;
+      background: #2563eb;
+      color: white;
+      padding: 15px;
+      border: none;
+      border-radius: 8px;
+      font-size: 17px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #1e40af;
+    }
+
+    .whatsapp-box {
+      text-align: center;
+      margin-top: 25px;
+    }
+
+    .whatsapp-box p {
+      margin-bottom: 15px;
+      color: #374151;
+    }
+
+    footer {
+      background: #0f172a;
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+    }
+
+    footer a {
+      color: #facc15;
+      text-decoration: none;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 32px;
+      }
+
+      header p {
+        font-size: 18px;
+      }
+
+      .highlight {
+        transform: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>Haz crecer tu negocio anunciándote con nosotros</h1>
+
+    <p>
+      Conecta tu empresa con nuevos clientes mediante espacios publicitarios visibles,
+      profesionales y pensados para negocios que quieren vender más.
+    </p>
+
+    <a class="btn btn-whatsapp" href="[api.whatsapp.com](https://api.whatsapp.com/send?phone=34600540679&text=Hola%2C%20quiero%20informaci%C3%B3n%20para%20anunciar%20mi%20empresa)" target="_blank">
+      Anunciar mi empresa por WhatsApp
+    </a>
+  </header>
+
+  <section>
+    <h2>Por qué anunciar tu empresa aquí</h2>
+
+    <p class="intro">
+      Ofrecemos espacios publicitarios accesibles para que pequeñas, medianas y grandes
+      empresas puedan ganar visibilidad y atraer más clientes.
+    </p>
+
+    <div class="grid">
+      <div class="card">
+        <h3>Más visibilidad</h3>
+        <p>
+          Tu anuncio aparecerá en zonas destacadas de nuestra web para que más personas
+          conozcan tu negocio.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Clientes interesados</h3>
+        <p>
+          Mostramos tu marca a usuarios que buscan productos, servicios y empresas de confianza.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Publicidad flexible</h3>
+        <p>
+          Puedes elegir el plan que mejor se adapte a tu presupuesto y objetivos.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="stats">
+    <h2>Nuestro alcance</h2>
+
+    <div class="stats-container">
+      <div class="stat-box">
+        <strong>+10.000</strong>
+        visitas mensuales
+      </div>
+
+      <div class="stat-box">
+        <strong>+500</strong>
+        empresas interesadas
+      </div>
+
+      <div class="stat-box">
+        <strong>24/7</strong>
+        presencia online
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Planes de publicidad</h2>
+
+    <p class="intro">
+      Elige el plan que mejor se adapte a tu empresa. Oferta especial para nuevos anunciantes.
+    </p>
+
+    <div class="grid">
+      <div class="card">
+        <h3>Plan Básico</h3>
+        <div class="price">25€ <span>/ mes</span></div>
+
+        <ul class="features">
+          <li>Nombre de la empresa</li>
+          <li>Logo o imagen</li>
+          <li>Descripción corta</li>
+          <li>Enlace a web o WhatsApp</li>
+          <li>Publicado durante 30 días</li>
+        </ul>
+      </div>
+
+      <div class="card highlight">
+        <h3>Plan Destacado</h3>
+        <div class="price">59€ <span>/ mes</span></div>
+
+        <ul class="features">
+          <li>Todo lo del Plan Básico</li>
+          <li>Imagen destacada</li>
+          <li>Mejor posición en la web</li>
+          <li>Botón directo a WhatsApp</li>
+          <li>Mayor visibilidad</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>Plan Premium</h3>
+        <div class="price">99€ <span>/ mes</span></div>
+
+        <ul class="features">
+          <li>Todo lo del Plan Destacado</li>
+          <li>Banner principal en portada</li>
+          <li>Ficha completa de empresa</li>
+          <li>Promoción destacada</li>
+          <li>Prioridad durante 30 días</li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="intro" style="margin-top: 35px;">
+      <strong>Oferta de lanzamiento:</strong> anuncia tu empresa desde solo
+      <strong>19€ el primer mes</strong>.
+    </p>
+  </section>
+
+  <section>
+    <h2>Formatos de anuncio disponibles</h2>
+
+    <p class="intro">
+      Adaptamos los espacios publicitarios para que tu marca se vea de forma profesional
+      y atractiva.
+    </p>
+
+    <div class="grid">
+      <div class="card">
+        <h3>Banner superior</h3>
+        <p>
+          Ideal para empresas que quieren máxima visibilidad desde el primer momento.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Anuncio destacado</h3>
+        <p>
+          Perfecto para promociones, negocios locales y campañas mensuales.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Ficha de empresa</h3>
+        <p>
+          Incluye logo, descripción, teléfono, web, redes sociales y llamada a la acción.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contacto">
+    <h2>Solicita información para anunciarte</h2>
+
+    <p class="intro">
+      Escríbenos y te enviaremos las opciones disponibles para anunciar tu empresa.
+    </p>
+
+    <form onsubmit="enviarWhatsApp(); return false;">
+      <input type="text" id="empresa" placeholder="Nombre de la empresa" required>
+      <input type="text" id="persona" placeholder="Persona de contacto" required>
+      <input type="email" id="email" placeholder="Correo electrónico" required>
+      <input type="tel" id="telefono" placeholder="Teléfono o WhatsApp">
+
+      <select id="plan" required>
+        <option value="">Selecciona un plan</option>
+        <option value="Plan Básico - 25€/mes">Plan Básico - 25€/mes</option>
+        <option value="Plan Destacado - 59€/mes">Plan Destacado - 59€/mes</option>
+        <option value="Plan Premium - 99€/mes">Plan Premium - 99€/mes</option>
+        <option value="Oferta lanzamiento - 19€ primer mes">Oferta lanzamiento - 19€ primer mes</option>
+      </select>
+
+      <textarea id="mensaje" placeholder="Cuéntanos qué tipo de anuncio quieres"></textarea>
+
+      <button type="submit">Enviar solicitud por WhatsApp</button>
+    </form>
+
+    <div class="whatsapp-box">
+      <p>También puedes escribirnos directamente por WhatsApp:</p>
+
+      <a class="btn btn-whatsapp" href="[api.whatsapp.com](https://api.whatsapp.com/send?phone=34600540679&text=Hola%2C%20quiero%20informaci%C3%B3n%20para%20anunciar%20mi%20empresa)" target="_blank">
+        Contactar por WhatsApp
+      </a>
+    </div>
+  </section>
+
+  <footer>
+    <p>
+      © 2026 TuWebDeAnuncios.com - Espacios publicitarios para empresas
+    </p>
+
+    <p>
+      WhatsApp: <a href="[api.whatsapp.com](https://api.whatsapp.com/send?phone=34600540679)" target="_blank">+34 600 540 679</a>
+    </p>
+  </footer>
+
+  <script>
+    function enviarWhatsApp() {
+      var empresa = document.getElementById("empresa").value;
+      var persona = document.getElementById("persona").value;
+      var email = document.getElementById("email").value;
+      var telefono = document.getElementById("telefono").value;
+      var plan = document.getElementById("plan").value;
+      var mensaje = document.getElementById("mensaje").value;
+
+      var texto =
+        "Hola, quiero información para anunciar mi empresa.%0A%0A" +
+        "Empresa: " + encodeURIComponent(empresa) + "%0A" +
+        "Persona de contacto: " + encodeURIComponent(persona) + "%0A" +
+        "Email: " + encodeURIComponent(email) + "%0A" +
+        "Teléfono: " + encodeURIComponent(telefono) + "%0A" +
+        "Plan elegido: " + encodeURIComponent(plan) + "%0A" +
+        "Mensaje: " + encodeURIComponent(mensaje);
+
+      var url = "[api.whatsapp.com](https://api.whatsapp.com/send?phone=34600540679&text=)" + texto;
+
+      window.open(url, "_blank");
+    }
+  </script>
+
+</body>
+</html>
